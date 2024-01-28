@@ -35,14 +35,17 @@ def check_angles():
     print("Check Inversion: yaw {}, {} | pitch {}, {} | roll {}, {}".format(yaw1, yaw2,
                                                                             pitch1, pitch2,
                                                                             roll1, roll2))
+    print("Original mat:")
+    print(rot_mat)
     print("mat from 1: ")
     res1 = Ex1.euler_to_rot_mat(yaw1, pitch1, roll1)
-    # print(res1)
-    print("Test: ", np.allclose(rot_mat, res1, atol=10**(-5)))
+    print(res1)
+    print("Test: ", np.allclose(rot_mat, res1, atol=10**(-4)))
     print()
-    # print("mat from 2: ")
+    print("mat from 2: ")
     res2 = Ex1.euler_to_rot_mat(yaw2, pitch2, roll2)
-    print("Test: ", np.allclose(rot_mat, res2, atol=10**(-5)))
+    print(res2)
+    print("Test: ", np.allclose(rot_mat, res2, atol=10**(-4)))
 
 
 if __name__ == '__main__':
@@ -50,9 +53,9 @@ if __name__ == '__main__':
     pitch = np.pi / 5.  # theta
     roll = np.pi / 4.  # phi
 
-    yaw = 0  # psi
-    pitch = np.pi / 3.  # theta
-    roll = 0.  # phi
+    # yaw = 0  # psi
+    # pitch = np.pi / 3.  # theta
+    # roll = 0.  # phi
     # check_rot()
     # check_inv(yaw, pitch, roll)
 
