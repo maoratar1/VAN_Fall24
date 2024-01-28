@@ -1,4 +1,4 @@
-import Ex1
+import Ex1.Ex1 as Ex1
 
 
 def main():

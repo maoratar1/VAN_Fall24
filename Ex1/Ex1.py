@@ -147,7 +147,7 @@ def q2():
     return
 
 
-def create_composed_T_arr(T, arr_len=10):
+def create_composed_T_arr(T, arr_len=11):
     arr = [None] * arr_len
     arr[0] = np.eye(3)
     for i in range(1, arr_len):
@@ -240,7 +240,7 @@ def q3b():
                             [0, 0, 1]])
     actual_angle = 1 * DEG_TO_RAD
     actual_T = np.array([[np.cos(actual_angle), -np.sin(actual_angle), 0.],
-                         [np.sin(actual_angle), np.cos(actual_angle), 1.0],
+                         [np.sin(actual_angle), np.cos(actual_angle), 1.01],
                          [0, 0, 1]])
 
     commanded_T_lst = create_composed_T_arr(commanded_T)
